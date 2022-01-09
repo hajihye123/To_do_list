@@ -35,7 +35,7 @@ function showList() {
     let list = "<ul>";
     // 내용 추가
     for (let i = 0; i < itemList.length; i++) {
-        list += "<li>" + itemList[i] + "<span class='close' id=" + i + ">" + "삭제" + "</span></li>";
+        list += "<li>" + itemList[i] + "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
     }
     list += "</ul>";
     document.querySelector(".item_list").innerHTML = list;
@@ -54,7 +54,7 @@ function init() {
         const parsedToDos = JSON.parse(savedTodos);     // 배열같은 문자열 "[a,b,c]"를 진짜 배열 [a,b,c]로 만들기
         itemList = parsedToDos;     // localstorage에 저장된 내용을 기존 배열에 담아줌-> 새로고침할 때마다 갱신됨
     }
-    showList();
 }
 
 init();
+showList();

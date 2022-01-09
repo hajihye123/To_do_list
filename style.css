@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+body {
+    font-family: 'Hi Melody', cursive;
+    font-size : larger
+}
+
+button {
+    font-family: 'Hi Melody', cursive;
+    font-size : large
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}

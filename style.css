@@ -14,3 +14,11 @@ html {
     justify-content: center;
     min-height: 100vh;
 }
+
+.checked {
+    text-decoration: line-through;
+  }
+
+.nonchecked {
+    text-decoration: none;
+}

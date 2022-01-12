@@ -30,20 +30,18 @@ function deleteItem() {
 }
 
 
-// 눌렀을 당시에만 적용되는 css
+// 할 일 클릭-> state 변경
 function line_through() {
     let id = this.getAttribute("id");
     
     if (itemList[id].state == "none") {   
         itemList[id].state="done";
-        document.getElementById(id).style.textDecoration="line-through";
-        //document.getElementById(id).className = "checked";
+        showList();
     }
 
     else if (itemList[id].state=="done") {
         itemList[id].state="none";
-        document.getElementById(id).style.textDecoration="none";
-        //document.getElementById(id).className = "nonchecked";
+        showList();
     }
     saveTodos();
 }

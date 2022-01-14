@@ -15,6 +15,35 @@ html {
     min-height: 100vh;
 }
 
+.main_title{
+    text-align: center;
+}
+
+.item{
+    width: 250px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.input_button{
+    background-color: rgb(243, 166, 204);
+    border-radius: 15px;
+    line-height: 27px;
+}
+
+.input_section {
+    align-items: center;
+}
+
+.close {
+    margin-left: 120px;
+}
+
+span {
+    display: inline-block;
+    width: 60px;
+}
+
 .checked {
     text-decoration: line-through;
   }

@@ -36,29 +36,31 @@ html {
     background-color: rgb(243, 166, 204);
     border-radius: 15px;
     line-height: 27px;
+    cursor: pointer;
 }
 
 /* X 버튼 */
 .close {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 /* 할일 리스트 */
 ul, li {
     list-style: none;
-    max-width: 330px;
+    max-width: 350px;
     width: 100%;
-    padding: 5px 0px 5px 5px;
+    padding: 2px 0px 6px 0px;
     border-bottom: 1px solid #efefef;
+    cursor: pointer;
 }
 
 /* 리스트의 마지막 요소 하단에 줄 2개가 생겨서 1개 삭제 */
-ul li:last-child {
+li:last-child {
     border-bottom: 0px;
 }
 
-ul li:before {
-    content: "> ";
+li:before {
+    content: "🌻 ";
 }
 
 /* 할일 내용 li 부분 */

@@ -25,6 +25,11 @@ function showClock() {
 // 리스트에 추가
 function addItem() {
     let item = document.querySelector(".item").value;
+    if (item == "" || item == null) {
+        alert("내용 입력 플리즈");
+        return false;
+    }
+
     let jsondata = {
         "task": item,
         "state": "none"
@@ -72,6 +77,7 @@ function saveTodos() {
 // 리스트 보여주기
 function showList() {
     let list = "<ul>";
+    let temp = "";
 
     // 새로고침할 때 localstorage에 저장된 state를 반영하여 나타내기
     for (let i = 0; i < itemList.length; i++) {
@@ -80,10 +86,11 @@ function showList() {
             list += "<li>" + "<span class='myitem' id=" + i + ">" + itemList[i].task +"</span>"+ "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
         }
         else if (itemList[i].state == "done") {
-            list += "<li>" + "<span style=\"text-decoration: line-through; background-color: #EAEAEA;\" class='myitem' id=" + i + ">" + itemList[i].task +"</span>"+ "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
+            //list += "<li>" + "<span style=\"text-decoration: line-through; background-color: #EAEAEA;\" class='myitem' id=" + i + ">" + itemList[i].task +"</span>"+ "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
+            temp += "<li>" + "<span style=\"text-decoration: line-through; background-color: #EAEAEA;\" class='myitem' id=" + i + ">" + itemList[i].task +"</span>"+ "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
         }
     }
-
+    list += temp;
     list += "</ul>";
     document.querySelector(".item_list").innerHTML = list;
 

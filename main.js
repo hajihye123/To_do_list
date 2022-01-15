@@ -4,6 +4,23 @@ const TODOS_KEY = "todos"
 let itemList = [];  // 할 일을 저장하는 리스트
 let input_btn = document.querySelector(".input_button");
 input_btn.addEventListener("click", addItem);    // 추가 버튼에 클릭 리스너를 연결
+let clock = document.getElementById("clock");   // 날짜 시각 표시
+
+// 시간 표시
+function showClock() {
+    let time = new Date();
+
+    let month = time.getMonth() + 1;
+    let date = time.getDate();
+    let day = time.getDay();
+    let week = ['일', '월,', '화', '수', '목', '금', '토'];
+
+    let hour = time.getHours();
+    let minute = time.getMinutes();
+    let second = time.getSeconds();
+
+    clock.innerHTML = '지금은 ' + month + '월 ' + date + '일 ' + week[day] + '요일 ' + hour + '시 ' + minute + '분 ' + second + '초에요';
+}
 
 // 리스트에 추가
 function addItem() {
@@ -63,7 +80,7 @@ function showList() {
             list += "<li>" + "<span class='myitem' id=" + i + ">" + itemList[i].task +"</span>"+ "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
         }
         else if (itemList[i].state == "done") {
-            list += "<li>" + "<span style=\"text-decoration: line-through\" class='myitem' id=" + i + ">" + itemList[i].task +"</span>"+ "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
+            list += "<li>" + "<span style=\"text-decoration: line-through; background-color: #EAEAEA;\" class='myitem' id=" + i + ">" + itemList[i].task +"</span>"+ "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
         }
     }
 
@@ -82,10 +99,7 @@ function showList() {
         
     }
 
-    
 }
-
-
 
 // 초기화
 function init() {
@@ -97,4 +111,16 @@ function init() {
     showList();
 }
 
+// 엔터 쳐도 추가되게 하기
+function Enter_Check(){
+    // 엔터키의 코드는 13
+    if(event.keyCode == 13){
+        addItem();  // 실행할 이벤트
+    }
+}
+
 init();
+showClock();
+setInterval(() => {
+    showClock()
+}, 1000);

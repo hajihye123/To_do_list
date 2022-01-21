@@ -19,7 +19,7 @@ function showClock() {
     let minute = time.getMinutes();
     let second = time.getSeconds();
 
-    clock.innerHTML = '지금은 ' + month + '월 ' + date + '일 ' + week[day] + '요일 ' + hour + '시 ' + minute + '분 ' + second + '초에요';
+    clock.innerHTML = '지금은 ' + month + '월 ' + date + '일 ' + week[day] + '요일 ' + hour + '시 ' + minute + '분 ' + second + '초입니다';
 }
 
 // 리스트에 추가

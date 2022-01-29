@@ -6,6 +6,9 @@ let input_btn = document.querySelector(".input_button");
 input_btn.addEventListener("click", addItem);    // 추가 버튼에 클릭 리스너를 연결
 let clock = document.getElementById("clock");   // 날짜 시각 표시
 
+let all_delete_btn = document.querySelector(".all_delete_button");
+all_delete_btn.addEventListener("click", allDelete);
+
 
 // 지도 표시
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -44,7 +47,7 @@ function addItem() {
     let address = document.querySelector(".address").value;
     
     if (item == "" || item == null) {
-        alert("내용 입력 플리즈");
+        alert("내용을 입력해주세요.");
         return false;
     }
 
@@ -61,6 +64,16 @@ function addItem() {
     }
     saveTodos();
     showList();
+}
+
+function allDelete() {
+    if (confirm("모두 삭제하시겠습니까?") == true) {
+        localStorage.clear();
+        window.location.reload();    
+    }
+    else {
+        return;
+    }
 }
 
 // 리스트에서 삭제
@@ -149,7 +162,7 @@ function showList() {
     let delete_btn = document.querySelectorAll(".close");
     for (let i = 0; i < delete_btn.length; i++) {
         delete_btn[i].addEventListener("click", deleteItem);
-    
+    }
 
     // 할일 클릭하면 줄 긋는 이벤트 추가
     let myitemm = document.querySelectorAll(".myitem");
@@ -163,7 +176,7 @@ function showList() {
         myaddresss[i].addEventListener("click", search_address);
     }
 
-    }
+    
 }
 
 // 초기화

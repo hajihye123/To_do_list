@@ -12,6 +12,11 @@ button {
     font-size : large
 }
 
+input::placeholder {
+    font-family: 'Hi Melody', cursive;
+    font-size : large
+}
+
 /* 화면 중앙 배치 */
 html {
     display: flex;
@@ -80,4 +85,12 @@ span.myitem {
 span.myaddress {
     display: inline-block;
     width: 300px;
+}
+
+/* 초기화 버튼 */
+.all_delete_button {
+    float: right;
+    border-radius: 15px;
+    line-height: 27px;
+    cursor: pointer;
 }

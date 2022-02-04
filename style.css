@@ -51,6 +51,20 @@ html {
     line-height: 27px;
     cursor: pointer;
 }
+.input_button:hover{
+    background-color: rgb(243, 129, 186);
+}
+
+/* 초기화 버튼 */
+.all_delete_button{
+    background-color: rgb(243, 166, 204);
+    border-radius: 15px;
+    line-height: 27px;
+    cursor: pointer;
+}
+.all_delete_button:hover{
+    background-color: rgb(243, 129, 186);
+}
 
 /* X 버튼 */
 .close {

@@ -121,7 +121,7 @@ function search_address() {
 
         // 인포윈도우로 장소에 대한 설명을 표시합니다
         var infowindow = new kakao.maps.InfoWindow({
-            content: '<div style="width:150px;text-align:center;padding:6px 0;">선택 위치</div>'
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">'+ itemList[id].task +'</div>'
         });
         infowindow.open(map, marker);
 
@@ -151,7 +151,7 @@ function showList() {
         }
         else if (itemList[i].state == "done") {
             //list += "<li>" + "<span style=\"text-decoration: line-through; background-color: #EAEAEA;\" class='myitem' id=" + i + ">" + itemList[i].task +"</span>"+ "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
-            temp += "<li>" + "<span style=\"text-decoration: line-through; background-color: #EAEAEA;\" class='myitem' id=" + i + ">" + itemList[i].task +"</span>" + "<span class='myaddress' id=" + i + ">" + itemList[i].address +"</span>" + "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
+            temp += "<li style=\" background-color: #EAEAEA;\">" + "<span class='myitem' id=" + i + ">" + itemList[i].task +"</span>" + "<span class='myaddress' id=" + i + ">" + itemList[i].address +"</span>" + "<span class='close' id=" + i + ">" + " ❌" + "</span></li>";
         }
     }
     list += temp;

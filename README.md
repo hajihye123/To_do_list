@@ -70,3 +70,5 @@ for문을 통해 모든 task를 받아오고, state에 따라 line-through 여�
 
 - 카카오 지도 API: https://apis.map.kakao.com/web/
 - 로컬 웹서버 구축: https://jsitclub.tistory.com/56
+- CSS 목록 스타일: https://www.walterz.net/2017/07/31/css-%EA%B9%94%EB%81%94%ED%95%9C-%EB%AA%A9%EB%A1%9D-%EC%8A%A4%ED%83%80%EC%9D%BC-css-list-style/
+- CSS 파일 변경 후 적용이 안될 때: https://meaownworld.tistory.com/89

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+/* 폰트 적용 */
+body {
+    font-family: 'Hi Melody', cursive;
+    font-size : larger
+}
+
+/* 폰트 적용 */
+button {
+    font-family: 'Hi Melody', cursive;
+    font-size : large
+}
+
+input::placeholder {
+    font-family: 'Hi Melody', cursive;
+    font-size : large
+}
+
+/* 화면 중앙 배치 */
+html {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main_title{
+    text-align: center;
+}
+
+/* 입력 칸 */
+.item{
+    width: 300px;
+    height: 25px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+.address{
+    width: 300px;
+    height: 25px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+
+/* 추가 버튼 */
+.input_button{
+    background-color: rgb(243, 166, 204);
+    border-radius: 15px;
+    line-height: 27px;
+    cursor: pointer;
+}
+.input_button:hover{
+    background-color: rgb(243, 129, 186);
+}
+
+/* 초기화 버튼 */
+.all_delete_button{
+    background-color: rgb(243, 166, 204);
+    border-radius: 15px;
+    line-height: 27px;
+    cursor: pointer;
+}
+.all_delete_button:hover{
+    background-color: rgb(243, 129, 186);
+}
+
+/* X 버튼 */
+.close {
+    margin-left: 10px;
+}
+
+/* 할일 리스트 */
+ul, li {
+    list-style: none;
+    max-width: 700px;
+    width: 100%;
+    padding: 2px 0px 6px 0px;
+    border-bottom: 1px solid #efefef;
+    cursor: pointer;
+}
+
+/* 리스트의 마지막 요소 하단에 줄 2개가 생겨서 1개 삭제 */
+li:last-child {
+    border-bottom: 0px;
+}
+
+li:before {
+    content: "🌻 ";
+}
+
+/* 할일 내용 li 부분 */
+span.myitem {
+    display: inline-block;
+    width: 300px;
+}
+
+span.myaddress {
+    display: inline-block;
+    width: 300px;
+}
+
+/* 초기화 버튼 */
+.all_delete_button {
+    float: right;
+    border-radius: 15px;
+    line-height: 27px;
+    cursor: pointer;
+}

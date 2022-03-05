@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+body {
+    font-family: 'Hi Melody', cursive;
+    font-size : larger
+}
+
+button {
+    font-family: 'Hi Melody', cursive;
+    font-size : large
+}
+
+input::placeholder {
+    font-family: 'Hi Melody', cursive;
+    font-size : large
+}
+
+/* 화면 중앙 배치 */
+html {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main_title{
+    text-align: center;
+}
+
+/* 리스트의 마지막 요소 하단에 줄 2개가 생겨서 1개 삭제 */
+li:last-child {
+    border-bottom: 0px;
+}
+
+li:before {
+    content: "🌻 ";
+}
+
+/* 입력 칸 */
+.add-input{
+    width: 300px;
+    height: 25px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+.add-address{
+    width: 300px;
+    height: 25px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+/* 추가 버튼 */
+.add{
+    background-color: rgb(243, 166, 204);
+    border-radius: 15px;
+    line-height: 27px;
+    cursor: pointer;
+}
+.add:hover{
+    background-color: rgb(243, 129, 186);
+}
+
+/* 할일 리스트 */
+ul, li {
+    list-style: none;
+    max-width: 700px;
+    width: 100%;
+    padding: 2px 0px 6px 0px;
+    border-bottom: 1px solid #efefef;
+    cursor: pointer;
+}
+
+
+
+hr {
+    margin-top: 50px;
+}
+
+span {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+span:hover {
+    color: #6a00ff;
+}
+
+.link-container {
+    text-align: center;
+}
+
+.link-box {
+    padding: 20px 0px 20px 0px;
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    text-align: center;
+}
+
+.page {
+    width: 50%;
+    margin: 0 auto;
+    height: 30vh;
+    border: 1px solid #4b4b4b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

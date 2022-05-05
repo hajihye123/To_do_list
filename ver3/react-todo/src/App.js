@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import About from './components/About';
+import About from './components/About.js';
 import { createGlobalStyle } from 'styled-components';
 import TodoTemplate from './components/TodoTemplate';
 import TodoList from './components/TodoList';

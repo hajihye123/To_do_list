@@ -33,6 +33,7 @@ const Nav = styled.nav`
   height: 60px;
   width: 100%;
   text-align: center;
+  
 `;
 
 const GnbLists = styled.ul`
